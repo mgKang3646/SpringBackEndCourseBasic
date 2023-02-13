@@ -1,6 +1,6 @@
 package hello.core.member;
 
-import hello.core.MemberService;
+import hello.core.order.Order;
 
 public class MemberServiceImpl implements MemberService {
 
@@ -15,4 +15,5 @@ public class MemberServiceImpl implements MemberService {
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
+
 }
