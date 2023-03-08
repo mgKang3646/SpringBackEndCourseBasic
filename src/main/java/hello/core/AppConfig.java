@@ -19,12 +19,14 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService(){
-        return new MemberServiceImpl(getMemberRepository()); // 생성자 주입
+        System.out.println("Call AppConfig.memberService ");
+        return new MemberServiceImpl(memberRepository()); // 생성자 주입
     }
 
     @Bean
     public OrderService orderService(){
-        return new OrderServiceImpl(getMemberRepository(), getDiscountPolicy());
+        System.out.println("Call AppConfig.orderService ");
+        return new OrderServiceImpl(memberRepository(), getDiscountPolicy());
     }
 
     @Bean
@@ -34,7 +36,8 @@ public class AppConfig {
     }
 
     @Bean
-    public MemoryMemberRepository getMemberRepository() {
+    public MemoryMemberRepository memberRepository() {
+        System.out.println("Call AppConfig.memberRepository ");
         return new MemoryMemberRepository();
     }
 
