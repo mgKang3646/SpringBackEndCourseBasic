@@ -23,9 +23,6 @@ public class AutoAppScan {
         MemberRepository memberRepository = bean.getMemberRepository();
         System.out.println("memberRepository = " + memberRepository);
 
-
-
-
     }
 
 
